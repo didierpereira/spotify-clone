@@ -6,6 +6,7 @@ import {
 import { Outlet } from "react-router-dom"
 import LeftSidebar from "./components/LeftSidebar"
 import FriendsActivity from "./components/FriendsActivity"
+import AudioPlayer from "./components/AudioPlayer"
 
 const MainLayout = () => {
   const isMobile = false
@@ -32,6 +33,7 @@ const MainLayout = () => {
           defaultSize={isMobile ? 80 : 60}
           minSize={isMobile ? 80 : 20}
         >
+          <AudioPlayer />
           <Outlet />
         </ResizablePanel>
 
