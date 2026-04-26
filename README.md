@@ -14,10 +14,8 @@ Un clon de Spotify full‑stack construido con **React 19**, **TypeScript**, **T
 ## 🖼️ Preview
 
 <p align="center">
-  <img src="https://via.placeholder.com/800x450/121212/1DB954?text=Spotify+Clone+Desktop+View" alt="Desktop view" width="80%">
+  <img src="./frontend/public/screens/preview.png" alt="Desktop view" width="80%">
 </p>
-
-_¿No tienes capturas aún? Saca 3 screenshots (Home + Álbum + Chat) y súbelas a una carpeta `/screenshots`. Luego reemplaza estos placeholders._
 
 ---
 
@@ -53,11 +51,13 @@ _¿No tienes capturas aún? Saca 3 screenshots (Home + Álbum + Chat) y súbelas
 
 ## 🧰 Stack Tecnológico
 
-| Capa         | Tecnologías                                                                    |
-| :----------- | :----------------------------------------------------------------------------- |
+| Capa         | Tecnologías                                                                     |
+| :----------- | :------------------------------------------------------------------------------ |
 | **Frontend** | React 19, TypeScript, Tailwind CSS, Radix UI, Zustand, Socket.IO Client, Clerk |
-| **Backend**  | Node.js, Express, MongoDB + Mongoose, Socket.IO, Clerk Middleware              |
-| **DevOps**   | Git + GitHub, Conventional Commits, Deploy en Render                           |
+| **Backend**  | Node.js, Express, MongoDB + Mongoose, Socket.IO, Clerk Middleware               |
+| **DevOps**   | Git + GitHub, Conventional Commits, Deploy en Render                            |
+
+---
 
 ## 🚀 Arranque Local
 
@@ -76,3 +76,33 @@ cd ../frontend
 npm install
 npm run dev     # Arranca en http://localhost:5173
 ```
+
+Variables de entorno necesarias (crea `.env` en `backend` y `frontend`):
+
+- `CLERK_PUBLISHABLE_KEY` y `CLERK_SECRET_KEY`
+- `MONGODB_URI`
+- `CLIENT_URL` (URL del frontend para CORS)
+
+---
+
+## 📦 Scripts Disponibles
+
+| Comando           | Descripción               |
+| :---------------- | :------------------------ |
+| `npm run dev`     | Servidor de desarrollo    |
+| `npm run build`   | Build de producción       |
+| `npm run preview` | Previsualizar build        |
+
+---
+
+## ⚡ Aprendizajes Clave
+
+- **Integrar Clerk en un mono-repo**: Sincronizar autenticación entre frontend (React) y backend (Express) con middleware compartido.
+- **Socket.IO con Zustand**: El reto fue mantener el estado del chat sincronizado con los eventos del socket sin causar re‑renderizados innecesarios.
+- **Deploy en Render**: Configurar el cold start de un mono-repo con dos servicios (backend + frontend) y variables de entorno.
+
+## 🙋‍♂️ Sobre Mí
+
+Construido con propósito de aprendizaje y portafolio por **Didier Pereira** – Frontend Developer especializado en React, Next.js y TypeScript.
+
+💼 [LinkedIn](https://www.linkedin.com/in/didierpereira/) | 🌐 [Portafolio](https://didier-portfolio.vercel.app/es)
