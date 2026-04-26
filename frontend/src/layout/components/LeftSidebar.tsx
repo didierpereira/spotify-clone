@@ -36,7 +36,7 @@ const LeftSidebar = () => {
 
           <SignedIn>
             <Link
-              to="/"
+              to="/chat"
               className={cn(
                 buttonVariants({
                   variant: "ghost",
@@ -81,7 +81,7 @@ const LeftSidebar = () => {
                   <div className="flex-1 min-w-0 hidden md:block">
                     <p className="font-medium truncate">{album.title}</p>
                     <p className="text-sm text-zinc-400 truncate">
-                      Album • {album.artitst}
+                      {`Album • ${album.artist}`}
                     </p>
                   </div>
                 </Link>
