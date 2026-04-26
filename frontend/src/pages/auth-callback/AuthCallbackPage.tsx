@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { axiosInstance } from "@/lib/axios"
-import { useMusicStore } from "@/stores/useMusicStore"
 import { useUser } from "@clerk/clerk-react"
 import { Loader } from "lucide-react"
 import { useEffect, useRef } from "react"
@@ -10,8 +9,6 @@ const AuthCallbackPage = () => {
   const { isLoaded, user } = useUser()
   const navigate = useNavigate()
   const syncAttempted = useRef(false)
-
-  const { songs, albums, fetchAlbums } = useMusicStore()
 
   useEffect(() => {
     const syncuser = async () => {
